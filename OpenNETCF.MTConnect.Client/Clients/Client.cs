@@ -41,13 +41,24 @@ namespace OpenNETCF.MTConnect
 
         public Client(string clientAddress)
         {
-            // [TODO] add default MTC port 5000 if no port is specified.
+
+            
+            // Need a scheme before we can use Uri class.
             if (!clientAddress.StartsWith("http", StringComparison.OrdinalIgnoreCase))
             {
                 clientAddress = "http://" + clientAddress;
             }
 
             var uri = new Uri(clientAddress, UriKind.Absolute);
+
+            // Use default MTC port 5000 if no port is specified (in which case the default is http port 80).
+            if (uri.Port == 80)
+            {
+                UriBuilder uriBuilder = new UriBuilder(uri.Scheme, uri.Host, 5000);
+
+                uri = uriBuilder.Uri;
+            }
+
             var connector = new RestConnector(uri);
             Initialize(connector, uri.LocalPath);
         }
