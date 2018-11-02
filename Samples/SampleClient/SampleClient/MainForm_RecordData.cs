@@ -53,6 +53,9 @@ namespace SampleClient
 
                     m_dataFile = File.CreateText(DataFilePath);
 
+                    // Ensure that everything is written to disk when writing to the stream, so we don't loose data.
+                    m_dataFile.AutoFlush = true;
+
                     var headers = new StringBuilder();
                     for (int i = 0; i < dataList.Items.Count; i++)
                     {
