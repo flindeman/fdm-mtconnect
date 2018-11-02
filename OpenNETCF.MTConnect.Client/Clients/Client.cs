@@ -41,8 +41,6 @@ namespace OpenNETCF.MTConnect
 
         public Client(string clientAddress)
         {
-
-            
             // Need a scheme before we can use Uri class.
             if (!clientAddress.StartsWith("http", StringComparison.OrdinalIgnoreCase))
             {
