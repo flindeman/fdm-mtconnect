@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard1.2</TargetFramework>
+        <PackageTargetFallback>portable-net45+win8+wpa81+wp8</PackageTargetFallback>
+        <DebugType>full</DebugType>
+        <Description>A lightweight .NET Standard (1.3) library for simplifying making REST calls</Description>
+        <Authors>Chris Tacke</Authors>
+        <Copyright>©2017, Chris Tacke</Copyright>
+        <Version>1.0.17254</Version>
+        <PackageId>opennetcf-restconnector</PackageId>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+      <PackageReference Include="opennetcf-extensions-standard" Version="1.0.17160" />
+      <PackageReference Include="System.Net.Http" Version="4.3.2" />
+    </ItemGroup>
+</Project>

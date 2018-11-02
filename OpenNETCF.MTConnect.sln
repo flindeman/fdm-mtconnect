@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.MTConnect.Common.Standard", "OpenNETCF.MTConnect.Common\OpenNETCF.MTConnect.Common.Standard.csproj", "{CBA9483F-7463-481F-91D4-89EB94309DA0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282} = {8A4E5521-0360-4FBC-97DF-FA4DE629F282}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.MTConnect.Client.Standard", "OpenNETCF.MTConnect.Client\OpenNETCF.MTConnect.Client.Standard.csproj", "{5BED7545-44E1-477A-BECB-45312C368192}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleClient", "Samples\SampleClient\SampleClient\SampleClient.csproj", "{F28D26A8-D35D-4D42-86B2-05F5340E5C0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenNETCF.RestConnector", "OpenNETCF.RestConnector\OpenNETCF.RestConnector.csproj", "{8A4E5521-0360-4FBC-97DF-FA4DE629F282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,9 +58,24 @@ Global
 		{F28D26A8-D35D-4D42-86B2-05F5340E5C0B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F28D26A8-D35D-4D42-86B2-05F5340E5C0B}.Release|x86.ActiveCfg = Release|x86
 		{F28D26A8-D35D-4D42-86B2-05F5340E5C0B}.Release|x86.Build.0 = Release|x86
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A4E5521-0360-4FBC-97DF-FA4DE629F282}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8482FE31-12A2-4721-B5AD-C6577D4B2C2F}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = OpenNETCF.Net.MTConnect.FFx.vsmdi
