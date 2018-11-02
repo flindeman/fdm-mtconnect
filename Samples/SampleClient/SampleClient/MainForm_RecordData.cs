@@ -9,13 +9,23 @@ namespace SampleClient
     public partial class MainForm
     {
         // [TODO] change to %TEMP%
-        private const string DataFilePath = "C:\\temp\\mtc_data.csv";
+
+        private string m_dataFilePath;
         private StreamWriter m_dataFile;
         private object m_fileSyncRoot = new object();
 
         private void InitializeRecordData()
-        {
+        { 
+            m_dataFilePath = m_appSettings.Settings["RecordingFile"].Value;
+
             recordData.CheckedChanged += new System.EventHandler(recordData_CheckedChanged);
+        }
+
+        private String DataFilePath
+        {
+            get {
+                return m_dataFilePath;
+            }
         }
 
         private void WriteLineToFile(string fileLine)

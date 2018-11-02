@@ -20,7 +20,8 @@ namespace SampleClient
 
             InitializeComponent();
 
-            agentAddress.Text = m_appSettings.Settings["agentAddress"].Value; 
+            agentAddress.Text = m_appSettings.Settings["AgentAddress"].Value;
+            recordData.Text = "Recording to " + m_appSettings.Settings["RecordingFile"].Value;
 
             InitializeAgentTree();
 

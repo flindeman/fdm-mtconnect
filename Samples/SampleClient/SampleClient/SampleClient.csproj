@@ -190,7 +190,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MANUAL.txt" />
     <Content Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>

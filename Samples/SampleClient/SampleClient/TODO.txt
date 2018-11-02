@@ -1,0 +1,11 @@
+v test ClickOnce deployment.
+- test on Windows 10 by publishing: as that is what we will be using at formnext
+V use config file to store IP address (so it's easier to adjust while at formnext)
+- use config file to store sample interval (so it's easier to adjust while at formnext)
+V use config file to store file recording location (so it's easier to adjust while at formnext)
+- don't accept new values for recording once recording is in progress as column header cannot be added
+- don't allow recording if not connected
+- show Header data
+- record sequence number
+- make graph sliding window
+

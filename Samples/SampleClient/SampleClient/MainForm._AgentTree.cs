@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using System.Configuration;
+using System.IO;
 
 using OpenNETCF.MTConnect;
 
@@ -26,7 +27,7 @@ namespace SampleClient
 
             ExeConfigurationFileMap exeConfigurationFileMap = new ExeConfigurationFileMap();
 
-            exeConfigurationFileMap.ExeConfigFilename = @"C:\Users\Frank\AppData\Local\Stratasys\MTConnect Sample Client\MTConnectSampleClient.config";
+            exeConfigurationFileMap.ExeConfigFilename = Path.Combine(Environment.GetEnvironmentVariable("LocalAppData"), @"Stratasys\MTConnect Sample Client\MTConnectSampleClient.config");
 
             Configuration config = ConfigurationManager.OpenMappedExeConfiguration(exeConfigurationFileMap, ConfigurationUserLevel.None);
 
@@ -45,6 +46,11 @@ namespace SampleClient
                     m_appSettings.Settings.Add(strKey, strValue);
                 }
             }
+
+            String expandedPath = Environment.ExpandEnvironmentVariables(m_appSettings.Settings["RecordingFilePath"].Value);
+
+            m_appSettings.Settings.Add("RecordingFile", Path.Combine(expandedPath, "mtc_data.csv"));
+
         }
 
         private void InitializeAgentTree()
