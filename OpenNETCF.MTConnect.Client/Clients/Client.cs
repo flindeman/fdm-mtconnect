@@ -41,6 +41,7 @@ namespace OpenNETCF.MTConnect
 
         public Client(string clientAddress)
         {
+            // [TODO] add default MTC port 5000 if no port is specified.
             if (!clientAddress.StartsWith("http", StringComparison.OrdinalIgnoreCase))
             {
                 clientAddress = "http://" + clientAddress;
@@ -193,7 +194,9 @@ namespace OpenNETCF.MTConnect
 
                 if (from == -1)
                 {
+                    // [FRL] If result is null, it wasn't handled in any way.
                     var result = GetCurrentXml();
+                    if (result == null) return String.Empty;
                     if (result.Length == 0) return result;
                     next = GetNextSequenceID(result);
                     return result;

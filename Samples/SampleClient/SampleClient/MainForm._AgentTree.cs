@@ -25,6 +25,8 @@ namespace SampleClient
             agentTree.Nodes.Clear();
 
             // create a root node
+            // [FRL] if something does go wrong there could be no AgentInformation.
+            //       E.g. no port or invalid IP.
             var root = new TreeNode(devices.AgentInformation.Name);
             root.Tag = devices.AgentInformation;
 

@@ -188,6 +188,7 @@
             this.recordData.Name = "recordData";
             this.recordData.Size = new System.Drawing.Size(263, 21);
             this.recordData.TabIndex = 1;
+            // [TODO] remove or use actual value.
             this.recordData.Text = "Record data to \'C:\\mtc_data.csv\'";
             this.recordData.UseVisualStyleBackColor = true;
             // 

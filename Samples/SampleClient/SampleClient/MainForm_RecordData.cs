@@ -8,7 +8,8 @@ namespace SampleClient
 {
     public partial class MainForm
     {
-        private const string DataFilePath = "C:\\mtc_data.csv";
+        // [TODO] change to %TEMP%
+        private const string DataFilePath = "C:\\temp\\mtc_data.csv";
         private StreamWriter m_dataFile;
         private object m_fileSyncRoot = new object();
 
