@@ -150,7 +150,13 @@ namespace OpenNETCF.MTConnect
             }
             if (xml == string.Empty) return null;
             var stream = DataStream.FromXml(xml);
-            InstanceID = stream.InstanceID;
+
+            // If no samples can be retrieved, we can still end up here.
+            // [TODO] handle error earlier on when making the actual REST request.
+            if (stream != null)
+            {
+                InstanceID = stream.InstanceID;
+            }
             return stream;
         }
     }
