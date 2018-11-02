@@ -2,12 +2,51 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using System.Configuration;
+
 using OpenNETCF.MTConnect;
 
 namespace SampleClient
 {
     public partial class MainForm : Form
     {
+        private void InitializeConfiguration()
+        {
+            m_appSettings = new AppSettingsSection();
+
+            foreach (String strKey in ConfigurationManager.AppSettings)
+            {
+                m_appSettings.Settings.Add(strKey, ConfigurationManager.AppSettings[strKey]);
+            }
+
+
+            //
+            // Basic merging of app settings.
+            //
+
+            ExeConfigurationFileMap exeConfigurationFileMap = new ExeConfigurationFileMap();
+
+            exeConfigurationFileMap.ExeConfigFilename = @"C:\Users\Frank\AppData\Local\Stratasys\MTConnect Sample Client\MTConnectSampleClient.config";
+
+            Configuration config = ConfigurationManager.OpenMappedExeConfiguration(exeConfigurationFileMap, ConfigurationUserLevel.None);
+
+            AppSettingsSection appSettings = config.AppSettings;
+
+            foreach (String strKey in appSettings.Settings.AllKeys)
+            {
+                String strValue = appSettings.Settings[strKey].Value;
+
+                if (m_appSettings.Settings[strKey] != null)
+                {
+                    m_appSettings.Settings[strKey].Value = strValue;
+                }
+                else
+                {
+                    m_appSettings.Settings.Add(strKey, strValue);
+                }
+            }
+        }
+
         private void InitializeAgentTree()
         {
             agentTree.AfterSelect += new TreeViewEventHandler(agentTree_AfterSelect);
