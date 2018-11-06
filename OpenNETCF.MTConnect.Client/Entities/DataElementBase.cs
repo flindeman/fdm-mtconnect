@@ -49,7 +49,8 @@ namespace OpenNETCF.MTConnect
                 DataItemID = attr.Value;
             }
 
-            attr = element.Attribute(ns + XmlAttributeName.Timestamp);
+            //attr = element.Attribute(ns + XmlAttributeName.Timestamp);
+            attr = element.Attribute(XmlAttributeName.Timestamp);
             if (attr != null)
             {
                 try
@@ -59,7 +60,8 @@ namespace OpenNETCF.MTConnect
                 catch { }
             }
 
-            attr = element.Attribute(ns + XmlAttributeName.Sequence);
+            //attr = element.Attribute(ns + XmlAttributeName.Sequence);
+            attr = element.Attribute(XmlAttributeName.Sequence);
             if (attr != null)
             {
                 try
@@ -71,7 +73,8 @@ namespace OpenNETCF.MTConnect
 
             Writable = false;
 
-            attr = element.Attribute(ns + XmlAttributeName.Writable);
+            //attr = element.Attribute(ns + XmlAttributeName.Writable);
+            attr = element.Attribute(XmlAttributeName.Writable);
             if (attr != null)
             {
                 try

@@ -21,8 +21,17 @@ namespace SampleClient
             for (int i = 0; i < dataList.Items.Count; i++ )
             {
                 var lvi = dataList.Items[i];
-                var currentValue = m_client.GetDataItemById(((DataItem)lvi.Tag).ID).Value ?? string.Empty;
-                lvi.SubItems[4].Text = (currentValue ?? string.Empty).ToString();
+
+                IDataElement dataElement = m_client.GetDataItemById(((DataItem)lvi.Tag).ID);
+
+                var currentValue = dataElement.Value ?? string.Empty;
+                var sequence = dataElement.Sequence;
+
+                // var currentValue = m_client.GetDataItemById(((DataItem)lvi.Tag).ID).Value ?? string.Empty;
+
+                //lvi.SubItems[4].Text = (currentValue ?? string.Empty).ToString();
+                lvi.SubItems[4].Text = currentValue.ToString();
+                lvi.SubItems[5].Text = sequence.ToString();
 
                 fileLine.AppendFormat("{0}{1}", currentValue, i < (dataList.Items.Count - 1) ? "," : Environment.NewLine);
             }

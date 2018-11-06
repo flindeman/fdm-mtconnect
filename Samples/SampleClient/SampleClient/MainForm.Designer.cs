@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.agentTree = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.agentAddress = new System.Windows.Forms.TextBox();
@@ -47,6 +47,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dataPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPlot)).BeginInit();
@@ -126,7 +127,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(490, 522);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(629, 239);
+            this.groupBox2.Size = new System.Drawing.Size(860, 239);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data";
@@ -149,11 +150,12 @@
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader6,
-            this.columnHeader7});
+            this.columnHeader7,
+            this.columnHeader8});
             this.dataList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.dataList.Location = new System.Drawing.Point(7, 47);
             this.dataList.Name = "dataList";
-            this.dataList.Size = new System.Drawing.Size(616, 189);
+            this.dataList.Size = new System.Drawing.Size(847, 189);
             this.dataList.TabIndex = 0;
             this.dataList.UseCompatibleStateImageBehavior = false;
             this.dataList.View = System.Windows.Forms.View.Details;
@@ -185,15 +187,20 @@
             // dataPlot
             // 
             this.dataPlot.AllowDrop = true;
-            chartArea1.Name = "ChartArea1";
-            this.dataPlot.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.dataPlot.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.dataPlot.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.dataPlot.Legends.Add(legend4);
             this.dataPlot.Location = new System.Drawing.Point(490, 51);
             this.dataPlot.Name = "dataPlot";
             this.dataPlot.Size = new System.Drawing.Size(860, 465);
             this.dataPlot.TabIndex = 6;
             this.dataPlot.Text = "chart1";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "sequence";
+            this.columnHeader8.Width = 93;
             // 
             // MainForm
             // 
@@ -236,6 +243,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.CheckBox recordData;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 

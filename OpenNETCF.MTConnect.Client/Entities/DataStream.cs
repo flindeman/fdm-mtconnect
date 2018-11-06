@@ -155,8 +155,9 @@ namespace OpenNETCF.MTConnect
 
             var doc = XDocument.Parse(xml);
             var ns = doc.Root.GetDefaultNamespace();
+            
             var root = doc.Element(ns + "MTConnectStreams");
-
+            
             // this happens on an error
             // TODO: get the error text
             if (root == null) return null;

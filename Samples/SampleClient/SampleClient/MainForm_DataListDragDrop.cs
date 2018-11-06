@@ -25,15 +25,19 @@ namespace SampleClient
                         di.ID,
                         di.Name,
                         di.Type,
-                        string.Empty // value place holder
+                        string.Empty, // value place holder for Value
+                        string.Empty  // value place holder for Sequence
                     });
 
             lvi.Tag = di;
+
             dataList.Items.Add(lvi);
+
+            int numVariableDataColumns = 2;
 
             for (int i = 0; i < dataList.Columns.Count; i++)
             {
-                dataList.Columns[i].Width = i < dataList.Columns.Count - 1 ? -1 : -2;
+                dataList.Columns[i].Width = i < dataList.Columns.Count - numVariableDataColumns ? -1 : -2;
             }
         }
 
