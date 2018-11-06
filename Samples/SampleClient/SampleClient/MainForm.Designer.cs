@@ -60,7 +60,7 @@
             this.agentTree.HideSelection = false;
             this.agentTree.Location = new System.Drawing.Point(6, 19);
             this.agentTree.Name = "agentTree";
-            this.agentTree.Size = new System.Drawing.Size(445, 263);
+            this.agentTree.Size = new System.Drawing.Size(445, 472);
             this.agentTree.TabIndex = 0;
             // 
             // label1
@@ -100,7 +100,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 32);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(457, 573);
+            this.groupBox1.Size = new System.Drawing.Size(457, 729);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agent Structure";
@@ -112,9 +112,9 @@
             this.columnHeader5});
             this.propertyList.GridLines = true;
             this.propertyList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.propertyList.Location = new System.Drawing.Point(6, 288);
+            this.propertyList.Location = new System.Drawing.Point(6, 500);
             this.propertyList.Name = "propertyList";
-            this.propertyList.Size = new System.Drawing.Size(445, 268);
+            this.propertyList.Size = new System.Drawing.Size(445, 228);
             this.propertyList.TabIndex = 1;
             this.propertyList.UseCompatibleStateImageBehavior = false;
             this.propertyList.View = System.Windows.Forms.View.Details;
@@ -124,9 +124,9 @@
             this.groupBox2.Controls.Add(this.recordData);
             this.groupBox2.Controls.Add(this.dataList);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(490, 323);
+            this.groupBox2.Location = new System.Drawing.Point(490, 522);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(629, 282);
+            this.groupBox2.Size = new System.Drawing.Size(629, 239);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data";
@@ -134,7 +134,7 @@
             // recordData
             // 
             this.recordData.AutoSize = true;
-            this.recordData.Location = new System.Drawing.Point(7, 23);
+            this.recordData.Location = new System.Drawing.Point(7, 20);
             this.recordData.Name = "recordData";
             this.recordData.Size = new System.Drawing.Size(263, 21);
             this.recordData.TabIndex = 1;
@@ -151,9 +151,9 @@
             this.columnHeader6,
             this.columnHeader7});
             this.dataList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.dataList.Location = new System.Drawing.Point(5, 53);
+            this.dataList.Location = new System.Drawing.Point(7, 47);
             this.dataList.Name = "dataList";
-            this.dataList.Size = new System.Drawing.Size(594, 212);
+            this.dataList.Size = new System.Drawing.Size(616, 189);
             this.dataList.TabIndex = 0;
             this.dataList.UseCompatibleStateImageBehavior = false;
             this.dataList.View = System.Windows.Forms.View.Details;
@@ -191,7 +191,7 @@
             this.dataPlot.Legends.Add(legend1);
             this.dataPlot.Location = new System.Drawing.Point(490, 51);
             this.dataPlot.Name = "dataPlot";
-            this.dataPlot.Size = new System.Drawing.Size(629, 263);
+            this.dataPlot.Size = new System.Drawing.Size(860, 465);
             this.dataPlot.TabIndex = 6;
             this.dataPlot.Text = "chart1";
             // 
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 617);
+            this.ClientSize = new System.Drawing.Size(1362, 768);
             this.Controls.Add(this.dataPlot);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
