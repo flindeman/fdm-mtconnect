@@ -43,7 +43,18 @@ namespace SampleClient
 
         void dataList_DragEnter(object sender, DragEventArgs e)
         {
-            e.Effect = DragDropEffects.Copy;
+            bool startRecording = recordData.Checked;
+
+            if (startRecording)
+            {
+                e.Effect = DragDropEffects.None;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+
+            
         }
     }
 }

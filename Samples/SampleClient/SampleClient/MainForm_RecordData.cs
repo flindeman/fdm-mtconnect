@@ -8,8 +8,6 @@ namespace SampleClient
 {
     public partial class MainForm
     {
-        // [TODO] change to %TEMP%
-
         private string m_dataFilePath;
         private StreamWriter m_dataFile;
         private object m_fileSyncRoot = new object();
