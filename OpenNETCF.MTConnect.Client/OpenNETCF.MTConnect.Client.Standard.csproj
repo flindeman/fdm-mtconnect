@@ -69,6 +69,10 @@
       <Project>{cba9483f-7463-481f-91d4-89eb94309da0}</Project>
       <Name>OpenNETCF.MTConnect.Common.Standard</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenNETCF.RestConnector\OpenNETCF.RestConnector.csproj">
+      <Project>{8a4e5521-0360-4fbc-97df-fa4de629f282}</Project>
+      <Name>OpenNETCF.RestConnector</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

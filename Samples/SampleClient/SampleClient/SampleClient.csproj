@@ -31,7 +31,7 @@
     <ProductName>MTConnect sample client application</ProductName>
     <PublisherName>Stratasys Ltd.</PublisherName>
     <SuiteName>MTConnect sample client application</SuiteName>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -80,10 +80,6 @@
   <ItemGroup>
     <Reference Include="OpenNETCF.Extensions, Version=1.0.17160.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\opennetcf-extensions-standard.1.0.17160.0\lib\netstandard1.1\OpenNETCF.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.RestConnector, Version=1.0.17160.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\opennetcf-restconnector.1.0.17160.0\lib\netstandard1.1\OpenNETCF.RestConnector.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -176,6 +172,10 @@
       <Project>{cba9483f-7463-481f-91d4-89eb94309da0}</Project>
       <Name>OpenNETCF.MTConnect.Common.Standard</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\OpenNETCF.RestConnector\OpenNETCF.RestConnector.csproj">
+      <Project>{8a4e5521-0360-4fbc-97df-fa4de629f282}</Project>
+      <Name>OpenNETCF.RestConnector</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6">
@@ -193,16 +193,6 @@
     <Content Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="MANUAL.txt">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
     <PublishFile Include="TODO.txt">
       <Visible>False</Visible>
       <Group>

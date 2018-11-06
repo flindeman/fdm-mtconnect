@@ -1,8 +1,0 @@
-- test on Windows by publishing: as that is what we will be 
-- use config file to store IP address (so it's easier to adjust while at formnext)
-- use config file to store sample interval (so it's easier to adjust while at formnext)
-- don't accept new values for recording once recording is in progress as column header cannot be added
-- show Header data
-- record sequence number
-- make graph sliding window
-
