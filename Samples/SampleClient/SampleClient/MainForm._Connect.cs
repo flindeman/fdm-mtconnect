@@ -21,6 +21,7 @@ namespace SampleClient
             }
 
             connect.Enabled = false;
+            recordData.Enabled = true;
 
             // probe the client for devices
             var devices = m_client.Probe();

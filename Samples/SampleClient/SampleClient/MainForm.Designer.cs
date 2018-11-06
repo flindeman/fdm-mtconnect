@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.agentTree = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.agentAddress = new System.Windows.Forms.TextBox();
@@ -135,6 +135,7 @@
             // recordData
             // 
             this.recordData.AutoSize = true;
+            this.recordData.Enabled = false;
             this.recordData.Location = new System.Drawing.Point(7, 20);
             this.recordData.Name = "recordData";
             this.recordData.Size = new System.Drawing.Size(263, 21);
@@ -187,10 +188,10 @@
             // dataPlot
             // 
             this.dataPlot.AllowDrop = true;
-            chartArea4.Name = "ChartArea1";
-            this.dataPlot.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.dataPlot.Legends.Add(legend4);
+            chartArea5.Name = "ChartArea1";
+            this.dataPlot.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.dataPlot.Legends.Add(legend5);
             this.dataPlot.Location = new System.Drawing.Point(490, 51);
             this.dataPlot.Name = "dataPlot";
             this.dataPlot.Size = new System.Drawing.Size(860, 465);
