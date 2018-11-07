@@ -43,6 +43,11 @@ namespace OpenNETCF.MTConnect
 
         internal DataElementBase(XNamespace ns, XElement element)
         {
+            //
+            // HERE: the element has an 'm' namespace, the attributes haven't so not found.
+            //       This 'm' is added by the LINQ XML APIs.
+            //       In most places in this codebase element.Attribute is used without a namespace.
+
             var attr = element.Attribute(XmlAttributeName.DataItemID);
             if (attr != null)
             {

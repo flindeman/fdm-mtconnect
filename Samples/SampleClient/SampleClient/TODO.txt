@@ -7,6 +7,8 @@ V don't allow recording if not connected
 V record sequence number
 V add an MTConnect logo
 - show Header data
-- make graph sliding window
+V make graph sliding window
 - use config file to store sample interval (so it's easier to adjust while at formnext)
+- use config file to store sliding window size
+- add alarms
 
