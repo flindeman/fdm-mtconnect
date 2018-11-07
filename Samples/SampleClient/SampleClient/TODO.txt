@@ -4,8 +4,9 @@ V use config file to store IP address (so it's easier to adjust while at formnex
 V use config file to store file recording location (so it's easier to adjust while at formnext)
 V don't accept new values for recording once recording is in progress as column header cannot be added
 V don't allow recording if not connected
-- show Header data
 V record sequence number
+V add an MTConnect logo
+- show Header data
 - make graph sliding window
 - use config file to store sample interval (so it's easier to adjust while at formnext)
 

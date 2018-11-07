@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.agentTree = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.agentAddress = new System.Windows.Forms.TextBox();
@@ -46,11 +47,13 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dataPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataPlot = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPlot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // agentTree
@@ -79,16 +82,16 @@
             this.agentAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agentAddress.Location = new System.Drawing.Point(166, 6);
             this.agentAddress.Name = "agentAddress";
-            this.agentAddress.Size = new System.Drawing.Size(303, 23);
+            this.agentAddress.Size = new System.Drawing.Size(216, 23);
             this.agentAddress.TabIndex = 2;
             this.agentAddress.Text = "agent.mtconnect.org";
             // 
             // connect
             // 
             this.connect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connect.Location = new System.Drawing.Point(475, 4);
+            this.connect.Location = new System.Drawing.Point(393, 6);
             this.connect.Name = "connect";
-            this.connect.Size = new System.Drawing.Size(76, 26);
+            this.connect.Size = new System.Drawing.Size(76, 24);
             this.connect.TabIndex = 3;
             this.connect.Text = "Connect";
             this.connect.UseVisualStyleBackColor = true;
@@ -185,29 +188,42 @@
             // 
             this.columnHeader7.Text = "value";
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "sequence";
+            this.columnHeader8.Width = 93;
+            // 
             // dataPlot
             // 
             this.dataPlot.AllowDrop = true;
-            chartArea5.Name = "ChartArea1";
-            this.dataPlot.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dataPlot.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.dataPlot.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.dataPlot.Legends.Add(legend3);
             this.dataPlot.Location = new System.Drawing.Point(490, 51);
             this.dataPlot.Name = "dataPlot";
             this.dataPlot.Size = new System.Drawing.Size(860, 465);
             this.dataPlot.TabIndex = 6;
             this.dataPlot.Text = "chart1";
             // 
-            // columnHeader8
+            // pictureBox1
             // 
-            this.columnHeader8.Text = "sequence";
-            this.columnHeader8.Width = 93;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(1156, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1362, 768);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataPlot);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -220,6 +236,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataPlot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,6 +262,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.CheckBox recordData;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
