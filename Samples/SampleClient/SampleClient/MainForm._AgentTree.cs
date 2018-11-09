@@ -20,6 +20,35 @@ namespace SampleClient
                 m_appSettings.Settings.Add(strKey, ConfigurationManager.AppSettings[strKey]);
             }
 
+            String localAppdataPath = Environment.GetEnvironmentVariable("LocalAppData");
+
+            String configFilePath = @"Stratasys\MTConnect Sample Client";
+
+            String configFileName = "MTConnectSampleClient.config";
+
+            String configFilePathToUse = Path.Combine(localAppdataPath, configFilePath);
+
+            String configFileToUse = Path.Combine(configFilePathToUse, configFileName);
+
+            //
+            // One time copy in place.
+            //
+
+            // Create folder.
+            if (!Directory.Exists(configFilePathToUse))
+            {
+                Directory.CreateDirectory(configFilePathToUse);
+            }
+
+            // If it's not already there,  opy the file from the deployment location to the folder.
+
+            String sourceFilePath = Path.Combine(System.Windows.Forms.Application.StartupPath, configFileName);
+
+            if (!File.Exists(configFileToUse))
+            {
+                File.Copy(sourceFilePath, configFileToUse);
+            }
+
 
             //
             // Basic merging of app settings.
@@ -27,7 +56,7 @@ namespace SampleClient
 
             ExeConfigurationFileMap exeConfigurationFileMap = new ExeConfigurationFileMap();
 
-            exeConfigurationFileMap.ExeConfigFilename = Path.Combine(Environment.GetEnvironmentVariable("LocalAppData"), @"Stratasys\MTConnect Sample Client\MTConnectSampleClient.config");
+            exeConfigurationFileMap.ExeConfigFilename = configFileToUse;
 
             Configuration config = ConfigurationManager.OpenMappedExeConfiguration(exeConfigurationFileMap, ConfigurationUserLevel.None);
 
